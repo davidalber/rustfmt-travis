@@ -5,3 +5,4 @@ script:
 - cargo fmt --all -- --write-mode=diff
 - cargo build
 - cargo test
+
