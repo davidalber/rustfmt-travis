@@ -24,7 +24,8 @@ fn get_remote_config() -> String {
     // Extract the config snippet from the README.
     let parser = Parser::new(&remote_config)
         .skip_while(|event| match event {
-            &Event::Text(ref s) => s != "A minimal Travis setup could look like this:",
+            &Event::Text(ref s) => s
+                != "A minimal Travis setup could look like this (requires Rust 1.24.0 or greater):",
             _ => true,
         })
         .skip_while(|event| match event {
