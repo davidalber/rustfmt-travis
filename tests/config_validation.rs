@@ -10,10 +10,7 @@ fn fetch_rustfmt_readme() -> String {
     const URL: &str =
         "https://raw.githubusercontent.com/rust-lang-nursery/rustfmt/master/README.md";
     let mut resp = reqwest::get(URL).unwrap();
-    assert!(
-        resp.status().is_success(),
-        format!("Could not fetch {}", URL)
-    );
+    assert!(resp.status().is_success(), "Could not fetch {}", URL);
     resp.text().unwrap()
 }
 
