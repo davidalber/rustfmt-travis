@@ -4,4 +4,4 @@ before_script:
 script:
 - cargo build
 - cargo test
-- cargo fmt -- --check
+- cargo fmt --all -- --check

@@ -22,7 +22,7 @@ fn get_remote_config() -> String {
     let parser = Parser::new(&remote_config)
         .skip_while(|event| match event {
             &Event::Text(ref s) => s
-                != "A minimal Travis setup could look like this (requires Rust 1.31.0 or greater):",
+                != "A minimal Travis setup could look like this (requires Rust 1.24.0 or greater):",
             _ => true,
         })
         .skip_while(|event| match event {
